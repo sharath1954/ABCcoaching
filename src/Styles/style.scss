@@ -1,0 +1,316 @@
+* {
+    background-color: #121212;
+    color: #fff;
+}
+
+// button mixin
+@mixin button {
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+}
+
+@mixin button-hover {
+    background-color: white;
+    color: black;
+}
+
+// Navbar styles
+
+.navbar-main {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid white;
+
+    #btn-logout {
+        @include button;
+    }
+    #btn-logout:hover {
+        @include button-hover;
+    }
+
+    .logo-col {
+        padding-left: 3rem;
+        #logo {
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+
+    .cart {
+        padding-right: 3rem;
+        padding-top: 1rem;
+    }
+
+    .nav-links {
+        text-align: center;
+        cursor: pointer;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+
+            li {
+                padding-left: 3rem;
+                padding-right: 3rem;
+                padding-top: 1rem;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// Login-prompt styles
+
+.login-prompt-main {
+    border: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 5px;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 3rem;
+    padding-bottom: 2.5rem;
+
+    .btn-col {
+        text-align: center;
+    }
+
+    .btn {
+        margin-top: 2.5rem;
+        @include button;
+        margin-right: 4rem;
+    }
+
+    .btn:hover {
+        @include button-hover;
+    }
+}
+
+// Login styles
+
+.login-main {
+    margin-top: 5%;
+
+    .login-form {
+
+        .form-group {
+            margin-left: 10%;
+            margin-right: 10%;
+            border: 1px solid white;
+            padding: 5rem;
+
+            #emailHelp {
+                color: white;
+            }
+
+            #exampleInputPassword1 {
+                margin-top: 2rem;
+            }
+
+            .btn {
+                margin-top: 3rem;
+                @include button;
+                margin-right: 4rem;
+            }
+
+            .btn:hover {
+                @include button-hover;
+            }
+        }
+    }
+}
+
+// Home styles
+
+.home-main {
+
+    .home-title-content {
+        margin-top: 2%;
+
+        h3 {
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        p {
+            margin-left: 3rem;
+            margin-right: 3rem;
+            text-align: justify;
+        }
+    }
+
+
+    .container {
+        margin-top: 2%;
+
+        .checkout-btn {
+            @include button;
+            display: none;
+        }
+        
+        .checkout-btn:hover {
+            @include button-hover;
+        }
+
+        #card-container {
+            padding: 2rem;
+            position: relative;
+
+            h3 {
+                position: relative;
+                top: 40%;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 50px;
+                font-weight: bold;
+            }
+        }
+        
+        .card {
+            background: url('../Assets/bg_card.png');
+            cursor: pointer;
+            padding: 1rem;
+            border: 1px solid white;
+            border-radius: 10px;
+            height: 40rem;
+        }
+
+        .selected {
+            border: 3px solid cyan;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: all 0.7s ease-in-out;
+        }
+    }
+}
+
+// Cart styles
+
+.cart-items-main {
+
+    ul {
+        list-style: none;
+
+        li {
+            display: flex;
+        }
+    }
+
+    .trash-btn {
+        background-color: transparent;
+        border: none;
+        margin-top: 10px;
+        margin-left: 3rem; 
+    }
+
+    .trash-btn:hover {
+        @include button-hover;
+    }
+
+    .quotation-btn {
+        @include button;
+        margin-top: 2rem;
+    }
+
+    .quotation-btn:hover {
+        @include button-hover;
+    }
+}
+
+// Quotation styles 
+
+.quotation-main {
+    margin-top: 5%;
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    input {
+        // center
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        height: 50px;
+    }
+
+    label {
+        font-size: 18px;
+    }
+
+    #course-list {
+        font-size: 17px;
+        list-style-type: disc;
+    }
+
+    .btn {
+        @include button;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn:hover {
+        @include button-hover;
+    }
+}
+
+// About styles
+.about-main {
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 1px solid white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+// Footer styles
+
+footer {
+    margin-top: 5%;
+    border-top: 1px solid white;
+    padding: 1rem;
+    padding-top: 2rem;
+
+    .footer-text {
+        display: flex;
+        justify-content: center;
+
+        p {
+            margin-right: 3rem;
+        }
+
+        div {
+            margin-left: 3rem;
+        }
+    }
+}
+
+// Register styles 
+
+.register-main {
+    margin-top: 5%;
+
+    input {
+        padding: 20px;
+        margin-bottom: 2rem;
+        width: 75%;
+        margin-left: 12%;
+    }
+
+    .btn {
+        @include button;
+    }
+
+    .btn:hover {
+        @include button-hover;
+    }
+}
